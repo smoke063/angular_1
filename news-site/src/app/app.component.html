@@ -1,0 +1,12 @@
+<div class="content" role="main">
+  <mat-nav-list>
+    <mat-list-item (click)="openCard(theme)" *ngFor="let theme of themes" >
+       <a matListItemTitle href="#">{{ theme.name }}</a>
+       <span matListItemMeta>
+          <mat-icon>info</mat-icon>
+       </span>
+    </mat-list-item>
+  </mat-nav-list>
+</div>
+ <mat-spinner class="app-spinner" *ngIf="isSpinnerShow"></mat-spinner>
+<router-outlet></router-outlet>

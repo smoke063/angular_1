@@ -1,0 +1,59 @@
+.card-close-btn {
+    position: absolute;
+    bottom: 50px;
+    right: 80px;
+}
+.dialog-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+.card {
+  max-width: 450px;
+  margin: 8px;
+}
+.clickable-content {
+   cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    #54b3d6,
+    #54b3d6 50%,
+    #000 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+.clickable-content:before {
+  content: '';
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+}
+.clickable-content:hover {
+  background-position: 0;
+}
+.clickable-content:hover::before {
+    width: 100%;
+}
+
+.card-img {
+  float: left;
+  margin: 0 14px 8px 8px;
+}
+.card-title {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: lightyellow;
+}
+.card-text {
+  font-weight: 400;
+    font-size: 14px;
+}

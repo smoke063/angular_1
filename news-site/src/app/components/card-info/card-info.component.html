@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Новости</h1>
+<div mat-dialog-content class="dialog-content">
+  <mat-card class="card" *ngFor="let art of data.article">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title class="card-title">{{ art.title }}</mat-card-title>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <a class="clickable-content" [href]="art.url" target="_blank">
+        <img class="card-img"  width="300" height="200" src="{{art.image.small}}" alt="Image">
+        <span class="card-text">
+           {{ art.brief }}
+        </span>
+      </a>
+    </mat-card-content>
+  </mat-card>
+</div>
+<button class="card-close-btn" mat-dialog-close mat-fab color="accent" aria-label="Close" >
+  <mat-icon  aria-hidden="false" aria-label="Close" fontIcon="close"></mat-icon>
+</button>
